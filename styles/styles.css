@@ -9,7 +9,9 @@
     4. Areas
         4.1 Header
         4.2 Introduction
+        4.3 Projects
         etc.
+
     5. Media Queries
 ////////////////////////*/
 
@@ -62,6 +64,15 @@ a {
     flex-direction: row;
     justify-content: center;
     border: 2px dotted black;
+    padding: 0 15px;
+}
+
+.wrapper-outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dotted black;
+    padding: 0;
 }
 
 .inner-container-small {
@@ -69,7 +80,7 @@ a {
     flex-direction: column;
     align-items: center;
     flex-basis: 700px;
-    margin: 0 16px;
+    /*margin: 0 16px;*/
     padding: 100px 0;
     text-align: center;
     border: 2px dotted black;
@@ -79,7 +90,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-basis: 1200px;
-    margin: 0 16px;
+    /*margin: 0 16px;*/
     border: 2px dotted black;
 }
 
@@ -95,7 +106,6 @@ button {
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    /*width: 20px;*/
 }
 
 button:hover {
@@ -118,14 +128,18 @@ header {
     color: var(--header-text-color);
     padding: 0;
     text-align: center;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    width: 34px;
+    left: var(50% -17px);
 }
 
 .header-content p {
     margin: 20px 0;
-}
-
-.header-content-container {
-    margin: 0;
 }
 
 header nav {
@@ -133,6 +147,7 @@ header nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    padding: 10px 0;
 }
 
 header ul {
@@ -155,6 +170,17 @@ header a {
 
 .introduction p {
     margin: 12px 0;
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+.outer-container .projects {
+    background-color: var(--article-bg-color);
+}
+
+.projects article {
+    display: flex;
+    flex-direction: row;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
