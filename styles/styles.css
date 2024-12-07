@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-bg-color: rgba(72, 69, 228, 1); /* Volledig dekkend */
+    --header-bg-gradient-end: rgba(106, 90, 224, 1.2); /* Lichte transparantie */
+    --button-bg-color: rgba(237, 67, 133, 1); /* Volledig dekkend */
+    --article-bg-color: rgba(243, 246, 249, 1); /* Witachtig */
+    --title-color: rgba(87, 34, 205, 1);
+    --main-text-color: rgba(12, 12, 12, 1);
+    --services-text-color: rgba(122, 122, 122, 1);
+    --header-text-color: rgba(242, 240, 255, 1); /* Witte tekst */
+}
+
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+* {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px dotted black;
+}
+
+.inner-container-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 700px;
+    margin: 0 16px;
+    padding: 100px 0;
+    text-align: center;
+    border: 2px dotted black;
+}
+
+.inner-container-big {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    margin: 0 16px;
+    border: 2px dotted black;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--header-text-color);
+    border: none;
+    padding: 10px 20px;
+    width: auto;
+    display: inline-block;
+    border-radius: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /*width: 20px;*/
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: linear-gradient(
+            135deg,
+            var(--header-bg-color),
+            var(--header-bg-gradient-end)
+    );
+    color: var(--header-text-color);
+    padding: 0;
+    text-align: center;
+}
+
+.header-content p {
+    margin: 20px 0;
+}
+
+.header-content-container {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    list-style-type: none;
+}
+
+header a {
+    color: var(--header-text-color);
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.introduction h2, a {
+    color: var(--title-color);
+    margin: 12px 0;
+}
+
+.introduction p {
+    margin: 12px 0;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
