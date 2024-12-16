@@ -11,6 +11,7 @@
         4.2 Introduction
         4.3 Projects
         4.4 Services
+        4.5 Contact form
         etc.
 
     5. Media Queries
@@ -250,6 +251,53 @@ article {
 .services p {
     color: var(--services-text-color);
     font-size: 0.8rem;
+}
+
+/* --------------- 4.5 Contact form ------------------------- */
+
+.contact-form {
+    background: linear-gradient(
+            135deg,
+            var(--header-bg-color),
+            var(--header-bg-gradient-end)
+    );
+    color: var(--header-text-color);
+    text-align: center;
+}
+
+.contact-form section {
+    gap: 35px;
+}
+
+.contact-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.form-content input,
+.form-content textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-content button {
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
