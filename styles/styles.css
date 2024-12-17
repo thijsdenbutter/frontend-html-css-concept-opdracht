@@ -12,6 +12,7 @@
         4.3 Projects
         4.4 Services
         4.5 Contact form
+        4.6 Footer
         etc.
 
     5. Media Queries
@@ -126,7 +127,7 @@ header img {
     position: absolute;
     bottom: 0;
     width: 34px;
-    left: var(50% -17px);
+    left: calc(50% - 17px);
 }
 
 .header-content p {
@@ -299,6 +300,19 @@ article {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+/* --------------- 4.6 Footer ------------------------- */
+
+footer {
+    background-color: var(--main-text-color);
+}
+
+footer p {
+    color: var(--article-bg-color);
+    font-size: 0.5rem;
+    margin: 10px 0;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
