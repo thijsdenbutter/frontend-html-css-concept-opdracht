@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Projects
+        4.4 Services
+        4.5 Contact form
+        4.6 Footer
+        etc.
+
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-bg-color: rgba(72, 69, 228, 1); /* Volledig dekkend */
+    --header-bg-gradient-end: rgba(106, 90, 224, 1.2); /* Lichte transparantie */
+    --button-bg-color: rgba(237, 67, 133, 1); /* Volledig dekkend */
+    --article-bg-color: rgba(243, 246, 249, 1); /* Witachtig */
+    --title-color: rgba(87, 34, 205, 1);
+    --main-text-color: rgba(12, 12, 12, 1);
+    --services-text-color: rgba(122, 122, 122, 1);
+    --header-text-color: rgba(242, 240, 255, 1); /* Witte tekst */
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+html {
+    font-size: 18px;
+}
+
+* {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border: 2px dotted black;*/
+}
+
+.inner-container-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 700px;
+    margin: 100px 16px;
+    text-align: center;
+    /*border: 2px dotted black;*/
+}
+
+.inner-container-big {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+    /*border: 2px dotted black;*/
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--header-text-color);
+    border: none;
+    font-size: 0.5rem;
+    padding: 15px 30px;
+    width: auto;
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: linear-gradient(
+            135deg,
+            var(--header-bg-color),
+            var(--header-bg-gradient-end)
+    );
+    color: var(--header-text-color);
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    width: 34px;
+    left: calc(50% - 17px);
+}
+
+.header-content p {
+    margin: 20px 0;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+    list-style-type: none;
+}
+
+header a {
+    color: var(--header-text-color);
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+    gap: 12px;
+}
+
+.introduction h2, a {
+    color: var(--title-color);
+}
+
+.introduction p {
+    margin: 12px 0;
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+article {
+    /*border: 2px dotted green;*/
+}
+
+.projects {
+    background-color: var(--article-bg-color);
+    padding: 50px 0;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.projects article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-basis: 300px;
+    margin: 0 25px;
+    /*border: 2px dotted red;*/
+}
+
+.article-content a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-content img {
+    width: 60px;
+}
+
+.article-image-wrapper {
+    flex-basis: 800px;
+}
+
+.article-image-wrapper img {
+    width: 100%;
+    box-shadow: 0 20px 12px -10px rgba(0, 0, 0, 0.25)
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 0;
+
+}
+
+.services article {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border: 1px solid var(--title-color);
+    flex-basis: 300px;
+    height: 300px;
+    padding: 20px;
+    box-shadow: -2px 6px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.services img {
+    width: 50px;
+}
+
+.services h4 {
+    color: var(--title-color);
+}
+
+.services p {
+    color: var(--services-text-color);
+    font-size: 0.8rem;
+}
+
+/* --------------- 4.5 Contact form ------------------------- */
+
+.contact-form {
+    background: linear-gradient(
+            135deg,
+            var(--header-bg-color),
+            var(--header-bg-gradient-end)
+    );
+    color: var(--header-text-color);
+    text-align: center;
+}
+
+.contact-form section {
+    gap: 35px;
+}
+
+.contact-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.form-content input,
+.form-content textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-content button {
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* --------------- 4.6 Footer ------------------------- */
+
+footer {
+    background-color: var(--main-text-color);
+}
+
+footer p {
+    color: var(--article-bg-color);
+    font-size: 0.7rem;
+    margin: 15px 0;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    .nav-content ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .projects article,
+    .projects article:nth-child(even),
+    .projects-wrapper{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .project-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .article-image-wrapper,
+    .article-content{
+        flex-basis: 0;
+    }
+}
